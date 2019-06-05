@@ -1,8 +1,9 @@
 #### idea 效能 ###
-1，idea vim插件
+一，idea vim插件
 defaluts write -g ApplePressAndHoldEnabled 
 
 1, 键盘运动
+
 左/右/上/下移动：h/l/k/j
 跳转当页首／中／尾：H/M/L
 跳转到文章首部／尾部：gg/GG
@@ -14,14 +15,32 @@ defaluts write -g ApplePressAndHoldEnabled
 移动光标到上一个标记处(两个单引号）:''
 移动光标到上一个单词的开头：b
 移动光标到下一个单词的开头：w
-
+让光标所杂的行居屏幕中央:zz
+翻页：ctrl+d ctlr+u
 
 
 2, 查找
+/xxx(?xxx) 表示在整篇文档中搜索匹配xxx的字符串, / 表示向下查找, ? 表示向上查找.其中xxx可以是正规表达式,关于正规式就不多说了
+按n或者N可以往上或者往下搜索
+
+% 查找匹配的反括号, 包括 () [] { }
+:set ignorecase   忽略大小写
+*/# 当光标停留在某个单词上时, 输入这条命令表示查找与该单词匹配的
+g*/g#             匹配包含该单词的所有字符串
+f(F)x           查找光标所在行右(左)方第一个x字符 ; 表示继续往下找      , 表示反方向查找
 
 3，替换
+:s/aa/bb/g          光标所在行 aa 的替换为 bb
+
+:%s/aa/bb/g      文档 aa替换为 bb
+
+:2,23s/aa/bb/g   2-23行中aa替换为 bb
+
+:2,23s/^/#/        2-23行的行首加入 # 字符
+
 
 4，拷贝, 删除与粘贴(y 表示拷贝, d 表示删除, p/P 表示粘贴 一个表示上行一个表示下行)
+
 yw              表示拷贝从当前光标到光标所在单词结尾的内容.
 dw              表示删除从当前光标到光标所在单词结尾的内容.
 daw             表示删除光标所在的单词，不管光标在此单词那一位置
@@ -42,6 +61,46 @@ VISUAL模式
 用ctrl-V进入的块可视化模式（Blockwise visual mode）。可以选择一个矩形内的文本。
 选中后，按p可进行复制。再在需要的地方按P
 
+u 撤销       ctrl+r反向撤销 
+
+
+二，idea快捷键
+cmd+R，替换文本
+cmd+F，查找文本
+cmd+Shift+F，全局查找
+cmd+Alt+T，可以把代码包在一个块内，例如：try/catch
+cmd+Alt+left/right，返回至上次浏览的位置
+ctrl + opt + h, 方法的调用栈
+shift + shift,类搜索
+Ctrl+B/Ctrl+Click，快速打开光标处的类或方法（跳转到定义处）
+Ctrl+Alt+B，跳转到方法实现处
+
+
+三，item2 快捷键
+标签：
+新建标签：command + t
+关闭标签：command + w
+切换标签：command + 数字 或者 command + 左右方向键
+
+分屏：
+垂直分屏：command + d
+水平分屏：command + shift + d
+切换屏幕：command + option + 方向键 command + [ 或 command + ]
+查看历史命令：command + ;
+查看剪贴板历史：command + shift + h
+
+
+其他：
+清除当前行：ctrl + u
+到行首：ctrl + a
+到行尾：ctrl + e
+上一条命令：ctrl + p
+搜索命令历史：ctrl + r
+删除当前光标的字符：ctrl + d
+删除光标之前的字符：ctrl + h
+删除光标之前的单词：ctrl + w
+删除到文本末尾：ctrl + k
+清屏1：command + r
 
 
 
